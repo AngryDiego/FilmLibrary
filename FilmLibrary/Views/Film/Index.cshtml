@@ -1,0 +1,33 @@
+﻿@model List<FilmLibrary.Models.Film>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>index</title>
+</head>
+<body>
+<div>
+    <h1>Catalog</h1>
+    
+  
+    @foreach (var film in Model)
+    {
+        <a asp-action="Description" asp-route-id="@film.Id">
+            <div class="filmblock">
+                <img src="@film.ImagePath" width="250" height="320"/>
+                <br/>
+                <p>Title : @film.Title</p>
+                <p>Age restriction : @film.AgeRestriction</p>
+                <p>Plot : @film.Plot</p>
+            </div>
+        </a>
+    }
+    
+</div>
+</body>
+</html>
