@@ -1,0 +1,24 @@
+﻿@model Film
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Delete</title>
+</head>
+<body>
+<div>
+    <p>Do you want to delete @Model.Title ?</p>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id">
+        
+        <button>OK</button> <button asp-action="Index">NO</button>
+    </form>
+</div>
+</body>
+</html>

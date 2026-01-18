@@ -11,12 +11,21 @@
     <title>Description</title>
 </head>
 <body>
-   <div class="filmblock">
-        <img src="@Model.ImagePath" width="250" height="320"/>
-        <br/>
-        <p>Title : @Model.Title</p>
-        <p>Age restriction : @Model.AgeRestriction</p>
-        <p>Plot : @Model.Plot</p>
-    </div>
+<header>
+    <ul>
+        <li>
+            <a asp-action="Index">Main page</a>
+        </li>
+    </ul>
+</header>
+
+<div class="filmblock">
+    <img src="@Model.ImagePath" width="250" height="320"/>
+    <br/>
+    <p>Title : @Model.Title</p>
+    <p>Age restriction : @Model.AgeRestriction</p>
+    <p>Plot : @Model.Plot</p>
+    <p>Description : @Model.Description</p>
+</div>
 </body>
 </html>

@@ -12,9 +12,16 @@
 </head>
 <body>
 <div>
+    <header>
+        <ul>
+            <li>
+                <a asp-action="Index">Main page</a>
+            </li>
+        </ul>
+    </header>
+    
     <h1>Catalog</h1>
     
-  
     @foreach (var film in Model)
     {
         <a asp-action="Description" asp-route-id="@film.Id">
@@ -24,10 +31,13 @@
                 <p>Title : @film.Title</p>
                 <p>Age restriction : @film.AgeRestriction</p>
                 <p>Plot : @film.Plot</p>
+                <br/>
             </div>
         </a>
+        <a asp-action="Edit" asp-route-id="@film.Id">edit</a>
+        <a asp-action="Delete" asp-route-id="@film.Id">delete</a>
     }
-    
+
 </div>
 </body>
 </html>
